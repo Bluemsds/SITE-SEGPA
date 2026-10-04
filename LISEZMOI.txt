@@ -1,0 +1,15 @@
+SITE SEGPA JEAN VILAR (avec l'atelier Habitat intégré)
+=======================================================
+- index.html ............ tout le site (SEGPA + atelier Habitat)
+- mentions-legales.html . à compléter (zones jaunes)
+- netlify.toml .......... réglages Netlify
+- photos/ ............... À REMPLIR : y copier le dossier "photos" du site Habitat actuel
+                          (mêmes noms de fichiers : ulm-coque-3.jpg, macon-01-atelier-avant.jpg, ...)
+                          Tant que les photos manquent, un repère « Photo à ajouter » s'affiche.
+
+Mise en ligne : glisser-déposer le dossier entier sur https://app.netlify.com/drop
+
+Modifier les pages SEGPA : dans index.html, fonctions viewAccueil, viewSegpa, viewEquipe, viewAteliers.
+Les encadrés jaunes « À compléter » signalent les textes à remplacer (le plus simple : demander à Claude).
+Les projets Habitat : tableau PROJETS (identique au site d'origine).
+Le site reste non référencé par Google (noindex) jusqu'à validation de la direction.

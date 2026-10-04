@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SEGPA Jean Vilar</title>
+<meta name="description" content="La SEGPA du Collège Jean Vilar à Grigny : présentation, équipe, ateliers et réalisations de l'atelier Habitat.">
+<!-- Site non référencé par les moteurs de recherche tant que la direction n'a pas validé la publication. Supprimer la ligne suivante pour le rendre visible sur Google. -->
+<meta name="robots" content="noindex, nofollow">
+<style>[hidden]{display:none!important}img{max-width:100%}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,500;112,700;125,800&family=Public+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=Caveat:wght@500;700&display=swap">
+<style>
+/* =========== Jetons communs (style A par défaut) =========== */
+:root{
+  --bg:#EBEDEC; --surface:#F8F9F8; --ink:#1A1E21; --ink-2:#4A5157; --line:#C9CFCD;
+  --accent:#2150B8; --accent-ink:#FFFFFF; --pop:#B97A12; --ok:#2F7D4F; --ph-a:#DCE3E8; --ph-b:#C4CFD7;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif; --body:"Public Sans",system-ui,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace; --hand:"Caveat","Comic Sans MS",cursive;
+  --radius:2px; --stretch:125%;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){color-scheme:dark;
+    --bg:#15191C; --surface:#1D2226; --ink:#E6EAEC; --ink-2:#A3ACB2; --line:#343C42;
+    --accent:#7CA2F2; --accent-ink:#0E1114; --pop:#E0A640; --ok:#6BC291; --ph-a:#222A31; --ph-b:#2C363F;}
+}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#15191C; --surface:#1D2226; --ink:#E6EAEC; --ink-2:#A3ACB2; --line:#343C42;
+  --accent:#7CA2F2; --accent-ink:#0E1114; --pop:#E0A640; --ok:#6BC291; --ph-a:#222A31; --ph-b:#2C363F;}
+
+/* Style B — Atelier : couleurs des bleus de travail, jaune signalétique, rouge fuselage */
+body.s-b{color-scheme:light;
+  --bg:#FFFFFF; --surface:#FFFFFF; --ink:#101828; --ink-2:#3E4A5C; --line:#101828;
+  --accent:#1F4FD1; --accent-ink:#FFFFFF; --pop:#FFC928; --red:#E0442F; --ok:#1E9E5A; --ph-a:#E8EEFF; --ph-b:#C9D6FF;
+  --display:"Bricolage Grotesque","Arial Black",Arial,sans-serif; --body:"Atkinson Hyperlegible",Verdana,sans-serif; --radius:14px;}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--body);padding-inline:clamp(16px,4vw,48px);padding-block:0 48px;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1180px;margin-inline:auto}
+.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.02em}
+.label{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-2)}
+body.s-b .label{font-family:var(--body);font-weight:700;letter-spacing:.08em;color:var(--accent)}
+
+
+/* ---------- En-tête ---------- */
+header.site{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-block:22px;border-bottom:1px solid var(--line)}
+body.s-b header.site{border-bottom:3px solid var(--ink)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-mark{width:38px;height:38px;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;flex:none}
+.brand-mark span{background:var(--ink)}
+.brand-mark span:nth-child(5){background:var(--accent)}
+body.s-b .brand-mark span:nth-child(1),body.s-b .brand-mark span:nth-child(9){background:var(--pop)}
+body.s-b .brand-mark span:nth-child(3){background:var(--red)}
+body.s-b .brand-mark span{border-radius:3px}
+.brand-txt b{display:block;font-family:var(--display);font-stretch:var(--stretch);font-weight:800;font-size:1.05rem;line-height:1.1;text-transform:uppercase}
+body.s-b .brand-txt b{text-transform:none;font-size:1.3rem}
+.brand-txt small{font-size:.8rem;color:var(--ink-2)}
+nav.main{display:flex;flex-wrap:wrap;gap:4px}
+nav.main a{text-decoration:none;padding:8px 12px;font-weight:700;font-size:.92rem;border-radius:var(--radius)}
+nav.main a[aria-current="page"]{background:var(--ink);color:var(--bg)}
+body.s-b nav.main a{border:2px solid transparent;border-radius:999px}
+body.s-b nav.main a[aria-current="page"]{background:var(--pop);color:var(--ink);border-color:var(--ink)}
+
+/* ---------- Accueil ---------- */
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;padding-block:clamp(32px,5vw,64px) 36px}
+.hero h1{font-family:var(--display);font-stretch:var(--stretch);font-weight:800;font-size:clamp(2.2rem,5.2vw,4.2rem);line-height:.98;margin:8px 0 20px;text-transform:uppercase;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--accent)}
+body.s-b .hero h1{text-transform:none;line-height:1.02;letter-spacing:-.02em}
+body.s-b .hero h1 em{color:var(--ink);background:var(--pop);padding:0 .15em;border-radius:10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero p{max-width:56ch;margin:0 0 24px;color:var(--ink-2);font-size:1.06rem}
+.hero-photo{margin:0;position:relative}
+.hero-photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--ph-a)}
+.hero-photo figcaption{font-size:.82rem;color:var(--ink-2);padding-top:8px}
+body.s-b .hero-photo img{border:3px solid var(--ink);border-radius:var(--radius);box-shadow:8px 8px 0 var(--accent)}
+body.s-b .hero-photo .sticker{position:absolute;top:-14px;right:-8px;transform:rotate(6deg)}
+.sticker{display:none}
+body.s-b .sticker{display:inline-block;background:var(--red);color:#fff;font-family:var(--display);font-weight:800;padding:8px 14px;border:3px solid var(--ink);border-radius:999px;font-size:.95rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink)}
+.stats div{padding:14px 12px 0 0}
+.stats b{display:block;font-family:var(--display);font-stretch:112%;font-weight:700;font-size:2rem;line-height:1;font-variant-numeric:tabular-nums}
+.stats span{font-size:.82rem;color:var(--ink-2)}
+body.s-b .stats{border:0;gap:10px}
+body.s-b .stats div{padding:12px;border:3px solid var(--ink);border-radius:var(--radius)}
+body.s-b .stats div:nth-child(1){background:var(--pop)}
+body.s-b .stats div:nth-child(2){background:var(--accent);color:#fff}
+body.s-b .stats div:nth-child(2) span{color:#E4EAFF}
+body.s-b .stats div:nth-child(3){background:var(--red);color:#fff}
+body.s-b .stats div:nth-child(3) span{color:#FFE4DF}
+
+/* filtres */
+.filters{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:end;padding:18px 0;border-block:1px solid var(--line);margin-bottom:28px}
+body.s-b .filters{border:3px solid var(--ink);border-radius:var(--radius);padding:16px;background:var(--ph-a)}
+.filters label{display:grid;gap:4px;min-width:0}
+.filters select{font:inherit;font-size:.92rem;padding:8px 32px 8px 10px;max-width:100%;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:var(--radius)}
+body.s-b .filters select{border:2px solid var(--ink);border-radius:10px;font-weight:700}
+.filters .count{margin-left:auto;align-self:center}
+button.reset{font:inherit;font-size:.85rem;background:none;border:0;color:var(--accent);text-decoration:underline;cursor:pointer;padding:8px 0}
+
+/* cartes */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,440px),1fr));gap:32px}
+.card{display:flex;flex-direction:column;text-decoration:none;background:var(--surface);border:1px solid var(--line);transition:transform .2s ease,box-shadow .2s ease}
+.card-media{aspect-ratio:16/10;overflow:hidden;position:relative;background:var(--ph-a)}
+.card-media canvas,.card-media img{width:100%;height:100%;display:block;object-fit:cover}
+.status{position:absolute;top:12px;left:12px;background:var(--surface);color:var(--ink);padding:4px 10px;font-family:var(--mono);font-size:.72rem;display:flex;align-items:center;gap:6px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+.card-body{padding:20px 20px 16px;flex:1}
+.card-body h2{font-family:var(--display);font-stretch:112%;font-weight:700;font-size:1.45rem;line-height:1.15;margin:4px 0 8px;text-wrap:balance}
+.card-body p{margin:0;color:var(--ink-2);font-size:.95rem}
+body.s-b .card{border:3px solid var(--ink);border-radius:var(--radius);box-shadow:6px 6px 0 var(--ink);overflow:hidden}
+body.s-b .card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--accent)}
+body.s-b .card-media{border-bottom:3px solid var(--ink)}
+body.s-b .status{background:var(--pop);border:2px solid var(--ink);border-radius:999px;font-family:var(--body);font-weight:700;transform:rotate(-3deg)}
+body.s-b .card-body h2{font-weight:800;font-size:1.6rem}
+.cartouche{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);font-family:var(--mono);font-size:.72rem}
+.cartouche div{padding:8px 10px;border-right:1px solid var(--line);min-width:0}
+.cartouche div:last-child{border-right:0}
+.cartouche span{display:block;color:var(--ink-2);text-transform:uppercase;letter-spacing:.08em;font-size:.64rem}
+.cartouche b{font-weight:500;overflow-wrap:anywhere}
+body.s-b .cartouche{font-family:var(--body);font-size:.85rem;border-top:3px solid var(--ink)}
+body.s-b .cartouche div{border-right:3px solid var(--ink)}
+body.s-b .cartouche div:last-child{border-right:0}
+body.s-b .cartouche b{font-weight:700}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tag{font-size:.78rem;padding:3px 8px;border:1px solid var(--line);border-radius:var(--radius);color:var(--ink-2)}
+.tag.m{border-color:var(--accent);color:var(--accent)}
+body.s-b .tag.m{background:var(--accent);color:#fff;border:2px solid var(--ink);border-radius:999px;font-weight:700}
+.empty{padding:40px;text-align:center;border:1px dashed var(--line);color:var(--ink-2)}
+
+/* ---------- Page projet ---------- */
+.crumb{padding-top:24px}
+.crumb a{font-size:.9rem;color:var(--ink-2)}
+.p-head{padding-block:20px 24px}
+.p-head h1{font-family:var(--display);font-stretch:var(--stretch);font-weight:800;text-transform:uppercase;font-size:clamp(2rem,4.8vw,3.6rem);line-height:1;margin:6px 0 0;text-wrap:balance;max-width:22ch}
+body.s-b .p-head h1{text-transform:none;letter-spacing:-.02em}
+.p-head .sub{margin:12px 0 0;color:var(--ink-2);font-size:1.1rem;max-width:60ch}
+.p-hero{aspect-ratio:21/9;background:var(--ph-a);position:relative;overflow:hidden}
+.p-hero canvas,.p-hero img{width:100%;height:100%;display:block;object-fit:cover}
+body.s-b .p-hero{border:3px solid var(--ink);border-radius:var(--radius)}
+.ph-note{position:absolute;right:12px;bottom:12px;background:var(--surface);color:var(--ink-2);padding:4px 10px}
+.p-cart{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));border:1px solid var(--ink);border-top-width:2px;background:var(--surface);margin-top:12px}
+.p-cart div{border-bottom:1px solid var(--line)}
+body.s-b .p-cart{border:3px solid var(--ink);border-radius:var(--radius);overflow:hidden}
+body.s-b .p-cart div{border-bottom:0}
+.p-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(24px,5vw,64px);padding-top:40px}
+.p-main section{padding-bottom:40px}
+.p-main h2{font-family:var(--display);font-stretch:112%;font-weight:700;font-size:1.5rem;margin:0 0 14px;display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
+body.s-b .p-main h2{font-weight:800;font-size:1.7rem}
+.p-main h2 .mono{color:var(--ink-2);font-weight:400}
+.p-main p{max-width:65ch;margin:0 0 12px}
+aside.p-side{display:flex;flex-direction:column;gap:28px;align-self:start;position:sticky;top:calc(env(safe-area-inset-top,0px) + 56px)}
+aside.p-side h3{margin:0 0 8px}
+aside.p-side ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.93rem}
+aside.p-side li{padding-bottom:6px;border-bottom:1px solid var(--line)}
+body.s-b aside.p-side > div{border:3px solid var(--ink);border-radius:var(--radius);padding:14px}
+body.s-b aside.p-side > div:first-child{background:var(--pop)}
+body.s-b aside.p-side li{border-bottom:2px solid var(--ink)}
+body.s-b aside.p-side li:last-child{border-bottom:0}
+.alert{border-left:4px solid var(--pop);background:var(--surface);padding:12px 14px;margin:0 0 16px;font-size:.95rem;max-width:65ch}
+body.s-b .alert{border:3px solid var(--ink);border-radius:var(--radius);background:var(--pop)}
+/* frise */
+.steps{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.steps li{position:relative;padding:0 0 18px 22px}
+.steps li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;background:var(--bg);border:2px solid var(--line);border-radius:50%}
+.steps li.done::before{background:var(--ink);border-color:var(--ink)}
+.steps li.now::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 25%,transparent)}
+.steps li.wait::before{background:var(--pop);border-color:var(--pop)}
+.steps b{display:block}
+.steps .mono{color:var(--ink-2)}
+.pill{display:inline-block;margin-left:8px;padding:1px 8px;font-family:var(--mono);font-size:.68rem;vertical-align:2px;border-radius:var(--radius)}
+.pill.now{background:var(--accent);color:var(--accent-ink)}
+.pill.wait{background:var(--pop);color:#1A1E21}
+body.s-b .steps{border-left:4px solid var(--ink)}
+body.s-b .steps li::before{left:-11px;width:18px;height:18px;border:3px solid var(--ink)}
+/* galerie */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;align-items:start}
+.gallery figure{margin:0}
+.gallery button.ph-btn{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.gallery img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--ph-a)}
+.gallery .tall img{aspect-ratio:3/4}
+.gallery .ph{aspect-ratio:4/3;background:repeating-linear-gradient(135deg,var(--ph-a) 0 12px,var(--ph-b) 12px 13px);display:grid;place-items:center;color:var(--ink-2);text-align:center;padding:8px}
+.gallery figcaption{font-size:.82rem;color:var(--ink-2);padding-top:6px}
+.gallery .k{display:inline-block;font-family:var(--mono);font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-right:6px}
+body.s-b .gallery img,body.s-b .gallery .ph{border:3px solid var(--ink);border-radius:10px}
+.quote-empty{border:1px dashed var(--line);padding:20px;color:var(--ink-2);font-size:.95rem}
+.comp{display:grid;border-top:1px solid var(--line)}
+.comp div{padding:10px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+body.s-b .comp{display:flex;flex-wrap:wrap;gap:8px;border:0}
+body.s-b .comp div{border:2px solid var(--ink);border-radius:999px;padding:6px 14px;font-weight:700}
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.doc{border:1px solid var(--line);padding:14px;background:var(--surface);font-size:.92rem}
+.doc .label{display:block;margin-bottom:4px}
+body.s-b .doc{border:3px solid var(--ink);border-radius:var(--radius)}
+/* lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(96vw,1200px)}
+dialog.lb::backdrop{background:rgba(10,12,14,.85)}
+dialog.lb img{max-width:100%;max-height:82vh;display:block;margin:auto}
+dialog.lb p{color:#F2F2F2;margin:8px 0 0;text-align:center}
+dialog.lb button{position:absolute;top:8px;right:8px;font:600 .9rem/1 var(--body);background:#fff;color:#111;border:0;padding:8px 12px;border-radius:4px;cursor:pointer}
+
+/* métiers */
+.m-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));border-top:2px solid var(--ink)}
+.m-item{padding:20px 20px 20px 0;border-bottom:1px solid var(--line)}
+.m-item h3{font-family:var(--display);font-stretch:112%;font-size:1.2rem;margin:0 0 6px}
+.m-item p{margin:0 0 10px;color:var(--ink-2);font-size:.93rem}
+.m-item a{font-size:.88rem;color:var(--accent);font-weight:700}
+.m-comp{list-style:none;margin:6px 0 12px;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.m-comp li{font-size:.8rem;padding:3px 10px;border:2px solid var(--ink);border-radius:999px;background:var(--surface);font-weight:700}
+.wait-ph{width:100%;height:100%;display:grid;place-items:center;text-align:center;padding:16px;background:repeating-linear-gradient(135deg,var(--ph-a) 0 14px,var(--ph-b) 14px 16px);font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--accent)}
+body.s-b .m-list{border:0;gap:16px}
+body.s-b .m-item{border:3px solid var(--ink);border-radius:var(--radius);padding:18px}
+body.s-b .m-item:nth-child(3n+1){background:#FFF4CC}
+body.s-b .m-item:nth-child(3n+2){background:var(--ph-a)}
+body.s-b .m-item:nth-child(3n){background:#FFE6E1}
+.page-h{font-family:var(--display);font-stretch:var(--stretch);font-weight:800;text-transform:uppercase;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1;margin:40px 0 12px}
+body.s-b .page-h{text-transform:none}
+.lead{color:var(--ink-2);max-width:62ch;margin:0 0 32px}
+
+
+footer.site{margin-top:64px;padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:.85rem;color:var(--ink-2)}
+
+@media (max-width:860px){
+  .hero,.p-layout{grid-template-columns:1fr}
+  aside.p-side{position:static}
+  .p-hero{aspect-ratio:16/10}
+}
+@media (max-width:520px){
+  .cartouche{grid-template-columns:1fr 1fr}
+  .cartouche div:nth-child(2n){border-right:0}
+  .filters .count{margin-left:0}
+  .stats b{font-size:1.6rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* =========== Ajouts site SEGPA (même jeu de jetons que l'atelier) =========== */
+nav.main a.hab{background:var(--accent);color:var(--accent-ink);border-color:var(--ink)}
+nav.main a.hab[aria-current="page"]{background:var(--pop);color:var(--ink)}
+.subnav{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding-top:20px}
+.subnav .label{margin-right:6px}
+.subnav a{text-decoration:none;font-weight:700;font-size:.9rem;padding:6px 14px;border:2px solid var(--ink);border-radius:999px}
+.subnav a[aria-current="page"]{background:var(--ink);color:var(--bg)}
+.facts{border:3px solid var(--ink);border-radius:var(--radius);box-shadow:8px 8px 0 var(--accent);background:var(--surface);padding:6px 20px}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:2px solid var(--ink);align-items:baseline}
+.facts div:last-child{border-bottom:0}
+.facts span{color:var(--ink-2)}
+.facts b{font-family:var(--display);font-weight:800;font-size:1.15rem;text-align:right}
+.hero .btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 20px;border:3px solid var(--ink);border-radius:999px;font-weight:700;text-decoration:none;background:var(--surface)}
+.btn.pri{background:var(--pop)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+.sec{padding-block:8px 36px}
+.sec h2{font-family:var(--display);font-weight:800;font-size:1.7rem;margin:0 0 14px;text-wrap:balance}
+.sec p{max-width:65ch;margin:0 0 12px}
+.sec .m-list{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.m-item.lnk{text-decoration:none;display:block}
+.m-item.lnk:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink)}
+.parcours{grid-template-columns:repeat(4,1fr)}
+.parcours div{border-bottom:0}
+.parcours b{font-family:var(--display);font-size:1.8rem;font-weight:800;display:block;color:var(--accent);text-transform:none}
+.parcours p{font-family:var(--body);font-size:.9rem;margin:6px 0 0}
+.bar{display:flex;height:12px;margin-top:10px;border:2px solid var(--ink);border-radius:999px;overflow:hidden}
+.bar i{display:block;background:var(--accent)}.bar i.b{background:var(--pop)}
+.team{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.doc h3{font-family:var(--display);font-size:1.1rem;margin:0 0 6px}
+.doc p{margin:0;color:var(--ink-2);font-size:.93rem}
+@media (max-width:760px){.parcours{grid-template-columns:1fr 1fr}.parcours div:nth-child(2n){border-right:0}.parcours div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+img.missing{object-fit:contain!important;background:var(--ph-a)}
+</style>
+</head>
+<body class="s-b">
+
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="#accueil">
+      <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="brand-txt"><b>SEGPA</b><small>Collège Jean Vilar · Grigny</small></div>
+    </a>
+    <nav class="main" aria-label="Navigation principale">
+      <a href="#accueil" data-nav="accueil">Accueil</a>
+      <a href="#segpa" data-nav="segpa">La SEGPA</a>
+      <a href="#equipe" data-nav="equipe">L'équipe</a>
+      <a href="#ateliers" data-nav="ateliers">Les ateliers</a>
+      <a href="#habitat" data-nav="habitat" class="hab">Atelier Habitat</a>
+      <a href="#has" data-nav="has" class="hab">Atelier HAS</a>
+      <a href="#projets" data-nav="projets">Projets</a>
+    </nav>
+  </header>
+  <main id="view"></main>
+  <footer class="site">
+    <span>SEGPA du Collège Jean Vilar, Grigny (91) · Académie de Versailles</span>
+    <span>Aucune photo publique ne montre le visage d'un élève. · <a href="mentions-legales.html">Mentions légales</a></span>
+  </footer>
+</div>
+<dialog class="lb" id="lb"><button type="button" id="lb-close">Fermer</button><img id="lb-img" alt=""><p id="lb-cap"></p></dialog>
+
+<script>
+
+/* ---------- Données : une entrée par fiche projet ---------- */
+const PROJETS = [
+  {
+    id:"ulm-bia",
+    titre:"Construire un ULM et passer le BIA",
+    accroche:"Toute l'année, la classe construit un ULM en atelier et prépare le Brevet d'initiation aéronautique, un diplôme national.",
+    classe:"3e SEGPA", annee:"2026-2027", statut:"Préparation des pièces", visuel:"plan",
+    couverture:"photos/ulm-coque-2.jpg", couvertureAlt:"Mains d'élèves poncant la coque rouge du fuselage",
+    dimension:"≤ 450 kg en charge", duree:"Sept. 2026 – juin 2027", cle:"6 phases",
+    metiers:["Monteur·se en structures aéronautiques","Mécanicien·ne aéronautique","Technicien·ne avionique"],
+    competences:["Lire un plan","Tracer et découper","Poser et assembler","Contrôler la qualité","Sécurité à l'atelier","Travailler en équipe","Calculer des surfaces","Présenter son travail"],
+    presentation:[
+      "Le projet a deux volets menés en parallèle. En atelier (6 h par semaine), les élèves construisent un ULM multiaxe : fuselage, ailes, gouvernes, commandes de vol et motorisation. Chaque élève est responsable d'une partie.",
+      "En cours BIA (1 h 30 par semaine), ils étudient l'aérodynamique, les aéronefs, la météo, la navigation et l'histoire de l'aviation, avec des intervenants du CIAJ. L'examen officiel a lieu en juin 2027, puis la classe visite le musée de l'Air et de l'Espace du Bourget."
+    ],
+    etapes:[
+      {t:"Préparation et étude",d:"Lecture des plans, identification des pièces, préparation et ponçage avant montage",p:"Sept.–oct. 2026",s:"now"},
+      {t:"Structure principale",d:"Fuselage central, longerons, cadres",p:"Oct.–déc. 2026",s:""},
+      {t:"Voilure et empennage",d:"Ailes, ailerons, gouvernes de direction et de profondeur",p:"Janv.–fév. 2027",s:""},
+      {t:"Commandes de vol",d:"Câbles, biellettes, guignols : du manche aux gouvernes",p:"Fév.–mars 2027",s:""},
+      {t:"Motorisation",d:"Moteur, hélice, réservoir et circuit carburant",p:"Mars–avril 2027",s:""},
+      {t:"Finitions et contrôles",d:"Peinture, entoilage, contrôles de sécurité, documentation",p:"Avril–mai 2027",s:""},
+      {t:"Examen BIA et visite du Bourget",d:"Examen officiel puis visite du musée de l'Air et de l'Espace",p:"Juin 2027",s:""}
+    ],
+    photos:[
+      {src:"photos/ulm-coque-3.jpg",k:"Pendant",c:"Ponçage de la coque avant du fuselage"},
+      {src:"photos/ulm-coque-1.jpg",k:"Pendant",c:"La coque sur son tréteau, avant remise en état"},
+      {src:"photos/ulm-aile-poncage.jpg",k:"Pendant",c:"Ponçage d'une pièce en bois, avec protections auditives",tall:true},
+      {src:"photos/ulm-etude-plans.jpg",k:"Pendant",c:"Étude des plans à l'atelier",tall:true}
+    ],
+    manque:["Après"],
+    materiaux:["Aluminium","Bois","Composite, toile ou polystyrène expansé","Perceuse, riveteuse, scie à ruban","EPI : lunettes, gants, protections auditives"],
+    partenaires:["CIAJ — Cercle d'initiation à l'aéronautique pour la jeunesse"],
+    documents:[{k:"Plan",v:"Plans de l'ULM et fiches de lecture cotées"},{k:"Contrôle",v:"Fiches de contrôle qualité par sous-ensemble"},{k:"Vidéo",v:"Ponçage et préparation des pièces — à tourner"}]
+  },
+  {
+    id:"fresque-grande-borne",
+    titre:"Le Phénix de La Grande Borne",
+    accroche:"Avec les ardoises des halls démolis, les élèves créent une fresque en mosaïque de 24,75 m² : un phénix, symbole de renaissance du quartier.",
+    classe:"4e SEGPA", annee:"2026-2027", statut:"Conception", visuel:"mosaique",
+    couverture:"photos/fresque-piste-phenix-immeuble.jpg", couvertureAlt:"Piste de motif : un phénix en mosaïque s'envole des gravats d'un immeuble", couvertureNote:"Piste de recherche · image générée par IA · motif non validé",
+    dimension:"4,50 × 5,50 m", duree:"2026-2027", cle:"4 panneaux",
+    metiers:["Carreleur·se mosaïste","Couvreur·se ardoisier·ère"],
+    competences:["Lire un plan","Tracer et découper","Poser et assembler","Contrôler la qualité","Sécurité à l'atelier","Travailler en équipe","Calculer des surfaces"],
+    presentation:[
+      "La Grande Borne, à Grigny, est en pleine réhabilitation. Avant la démolition de plusieurs halls, les ardoises noires de leurs façades ont été récupérées et stockées à l'atelier du collège. Elles deviennent la matière première d'une fresque en mosaïque réalisée par les élèves de 4e SEGPA.",
+      "Le thème retenu est le phénix, l'oiseau qui renaît de ses cendres, comme le quartier qui se reconstruit. Le méridien de Grigny apparaît en arrière-plan. La fresque, découpée en quatre panneaux, sera installée sur le pignon d'un bâtiment rénové du quartier."
+    ],
+    alerte:"Conception en cours : le motif sera validé avant le début de la pose.",
+    etapes:[
+      {t:"Lancement",d:"Histoire de La Grande Borne et de son architecte Émile Aillaud, règles de l'atelier",p:"Sept. 2026",s:"done"},
+      {t:"Conception du motif",d:"Le phénix et le méridien de Grigny : esquisses, choix du format, calcul des surfaces",p:"Sept.–oct. 2026",s:"now"},
+      {t:"Validation du concept",d:"Présentation du motif aux partenaires du projet",p:"À planifier",s:"wait"},
+      {t:"Réception des supports",d:"Arrivée et vérification des 4 panneaux support",p:"En attente",s:"wait"},
+      {t:"Production",d:"Découpe, façonnage et pose des ardoises selon gabarit, en binôme",p:"À venir",s:""},
+      {t:"Assemblage à blanc",d:"Les 4 panneaux côte à côte pour vérifier la continuité du motif",p:"À venir",s:""},
+      {t:"Livraison et inauguration",d:"Installation sur site et inauguration avec la Ville de Grigny",p:"2027",s:""}
+    ],
+    photos:[
+      {src:"photos/fresque-piste-phenix-immeuble.jpg",k:"Conception",c:"Piste 1 : le phénix renaît des gravats de l'immeuble (image de recherche générée par IA)"},
+      {src:"photos/fresque-piste-phenix-vue-aerienne.jpg",k:"Conception",c:"Piste 2 : le phénix survole le quartier vu du ciel (image de recherche générée par IA)"}
+    ],
+    manque:["Avant","Pendant","Après"],
+    materiaux:["Ardoises noires de récupération des halls démolis","Structure cornière aluminium + fond tôle","Colle de pose","Outils de découpe et de façonnage","Résine de protection (posée par un professionnel)"],
+    partenaires:["Bouygues Bâtiment","Ville de Grigny"],
+    documents:[{k:"Esquisses",v:"Recherches des élèves autour du phénix"},{k:"Plan",v:"Découpage de la fresque en 4 panneaux"},{k:"Carnet",v:"Cahiers de bord des élèves"}]
+  },
+  {
+    id:"mur-parpaing",
+    titre:"Monter un mur en parpaings avec linteau",
+    accroche:"Les élèves ont découvert la maçonnerie en construisant de vrais murs en blocs béton, de l'implantation au dernier rang, avec un linteau.",
+    classe:"3e SEGPA", annee:"2022-2023", statut:"Terminé", visuel:"attente",
+    couverture:"photos/macon-08-vue-ensemble.jpg", couvertureAlt:"Deux murs en parpaings montés par les élèves dans l'atelier",
+    dimension:"Blocs 50 × 20 cm", duree:"2023", cle:"Mur + linteau",
+    metiers:["Maçon·ne"],
+    competences:["Lire un plan","Mesurer et implanter","Préparer un mortier","Poser et assembler","Contrôler la qualité","Sécurité à l'atelier","Travailler en équipe"],
+    presentation:[
+      "Pour découvrir le métier de maçon, les élèves ont construit des murs en parpaings dans les box de l'atelier. Ils ont d'abord implanté l'ouvrage au sol, puis posé un premier rang à sec pour vérifier l'appareillage avant de monter les rangs au mortier.",
+      "À chaque rang, ils contrôlent le niveau, l'aplomb et l'alignement au cordeau, et croisent les joints d'un rang à l'autre. Le mur intègre un linteau, la pièce qui porte la maçonnerie au-dessus d'une ouverture."
+    ],
+    etapes:[
+      {t:"Implantation",d:"Tracé au sol, repères, pose des règles et du cordeau",p:"2023",s:"done"},
+      {t:"Premier rang à sec",d:"Disposition des blocs sans mortier pour vérifier l'appareillage et les coupes",p:"2023",s:"done"},
+      {t:"Montage au mortier",d:"Gâchage du mortier, pose rang par rang, joints croisés, contrôle au niveau",p:"2023",s:"done"},
+      {t:"Linteau",d:"Pose du linteau au-dessus de l'ouverture",p:"2023",s:"done"},
+      {t:"Contrôle final",d:"Vérification de l'aplomb, du niveau et de la régularité des joints",p:"2023",s:"done"}
+    ],
+    photos:[
+      {src:"photos/macon-01-atelier-avant.jpg",k:"Avant",c:"Le box de l'atelier avant le chantier",tall:true},
+      {src:"photos/macon-02-implantation.jpg",k:"Pendant",c:"Implantation du mur au pied de la cloison",tall:true},
+      {src:"photos/macon-03-premiers-blocs.jpg",k:"Pendant",c:"Mise en place des premiers blocs en binôme, lunettes de protection",tall:true},
+      {src:"photos/macon-04-rangs-a-sec.jpg",k:"Pendant",c:"Deux rangs posés à sec pour vérifier l'appareillage",tall:true},
+      {src:"photos/macon-05-pose-en-binome.jpg",k:"Pendant",c:"Pose d'un bloc : on croise les joints",tall:true},
+      {src:"photos/macon-06-joints-mortier.jpg",k:"Pendant",c:"Premiers rangs montés au mortier",tall:true},
+      {src:"photos/macon-07-mur-et-angle.jpg",k:"Après",c:"Mur terminé devant le box",tall:true},
+      {src:"photos/macon-09-mur-termine.jpg",k:"Après",c:"Mur terminé, joints croisés et arase de niveau",tall:true},
+      {src:"photos/macon-08-vue-ensemble.jpg",k:"Après",c:"Vue d'ensemble des deux murs dans l'atelier"}
+    ],
+    manque:[],
+    materiaux:["Blocs béton creux (parpaings)","Mortier de ciment","Linteau","Truelle, niveau à bulle, cordeau, mètre","EPI : gants, lunettes, chaussures de sécurité"],
+    partenaires:[],
+    documents:[{k:"Plan",v:"Plan du mur et calepinage des blocs"},{k:"Fiche",v:"Fiche méthode : monter un rang de parpaings"}],
+    paroles:"Aucun témoignage publié pour ce projet."
+  },
+  {
+    id:"support-telephone",
+    titre:"Fabriquer un support de téléphone",
+    accroche:"Un premier objet à fabriquer de A à Z : tracer, tailler un assemblage à mi-bois au ciseau, assembler, puis peindre son support de téléphone.",
+    classe:"4e SEGPA", annee:"2023-2024", statut:"Terminé", visuel:"attente",
+    couverture:"photos/supp-04-finition-rose-bleu.jpg", couvertureAlt:"Deux pièces de support de téléphone peintes en rose et bleu canard sur un plan de travail protégé",
+    dimension:"2 pièces à mi-bois", duree:"1 mois", cle:"Objet individuel",
+    metiers:["Menuisier·ère"],
+    competences:["Lire un plan","Tracer et découper","Poser et assembler","Appliquer une finition","Contrôler la qualité","Sécurité à l'atelier"],
+    presentation:["Chaque élève de 4e SEGPA a fabriqué son propre support de téléphone. Il est fait de deux pièces qui s'emboîtent grâce à une entaille : un assemblage à mi-bois, taillé à la main au ciseau à bois.","Une fois l'assemblage ajusté, chacun a choisi ses couleurs et sa technique de peinture : pinceau, bombe, motifs. Un projet court, idéal pour découvrir les gestes de base du menuisier."],
+    etapes:[
+      {t:"Traçage",d:"Report des cotes et de l'entaille à l'équerre sur le panneau",p:"2023-2024",s:"done"},
+      {t:"Découpe et entaille",d:"Découpe des deux pièces, puis entaille à mi-bois taillée au ciseau à bois",p:"2023-2024",s:"done"},
+      {t:"Ajustage et ponçage",d:"Les deux pièces doivent s'emboîter sans jeu",p:"2023-2024",s:"done"},
+      {t:"Mise en peinture",d:"Protection du plan de travail, puis peinture au pinceau ou à la bombe",p:"2023-2024",s:"done"}
+    ],
+    photos:[
+      {src:"photos/supp-01-entaille-ciseau.jpg",k:"Pendant",c:"L'entaille à mi-bois taillée au ciseau à bois",tall:true},
+      {src:"photos/supp-02-entaille-ciseau-2.jpg",k:"Pendant",c:"On retire la matière petit à petit, jusqu'au trait",tall:true},
+      {src:"photos/supp-03-peinture-pinceau.jpg",k:"Pendant",c:"Mise en peinture au pinceau",tall:true},
+      {src:"photos/supp-05-finition-bombe.jpg",k:"Après",c:"Fond rouge à la bombe et motifs au pinceau",tall:true},
+      {src:"photos/supp-04-finition-rose-bleu.jpg",k:"Après",c:"Finition rose et bleu canard",tall:true}
+    ],
+    manque:[],
+    materiaux:["Panneau de fibres (MDF)","Équerre, crayon, serre-joint","Scie, ciseau à bois, papier abrasif","Peinture acrylique, pinceaux, bombe de peinture","Film de protection du plan de travail"],
+    partenaires:[], documents:[{k:"Plan",v:"Plan du support et gabarit de traçage"}],
+    paroles:"Aucun témoignage publié pour ce projet."
+  },
+  {
+    id:"amplificateur-son",
+    titre:"Fabriquer un amplificateur de son",
+    accroche:"Un amplificateur pour téléphone, sans électricité : le son passe par les cavités creusées dans le bois et sort plus fort par les deux pavillons.",
+    classe:"4e SEGPA", annee:"2023-2024", statut:"Terminé", visuel:"attente",
+    couverture:"photos/ampli-02-sechage.jpg", couvertureAlt:"Amplificateurs de son en bois en séchage après la sous-couche blanche",
+    dimension:"Bloc de couches collées", duree:"2 mois", cle:"Objet individuel",
+    metiers:["Menuisier·ère"],
+    competences:["Lire un plan","Tracer et découper","Poser et assembler","Appliquer une finition","Contrôler la qualité","Sécurité à l'atelier"],
+    presentation:["Après le support de téléphone, les élèves de 4e SEGPA passent à un objet plus exigeant. L'amplificateur est un bloc fait de plusieurs couches de panneau superposées et collées, dans lesquelles on creuse une fente pour le téléphone et deux cavités rondes qui amplifient le son.","Chaque couche doit être tracée et découpée avec précision pour que les cavités tombent bien les unes sur les autres. Vient ensuite la finition : ponçage, masquage au ruban adhésif, sous-couche blanche, puis couleur au choix de l'élève."],
+    etapes:[
+      {t:"Traçage des couches",d:"Report du gabarit : contour, fente du téléphone et cavités rondes",p:"2023-2024",s:"done"},
+      {t:"Découpe et évidement",d:"Découpe de chaque couche et évidement des cavités",p:"2023-2024",s:"done"},
+      {t:"Collage",d:"Empilage et collage des couches sous serrage, cavités alignées",p:"2023-2024",s:"done"},
+      {t:"Ponçage et masquage",d:"Ponçage des faces, protection des chants au ruban adhésif",p:"2023-2024",s:"done"},
+      {t:"Finition",d:"Sous-couche blanche puis couleur : bombe, teinte ou lasure",p:"2023-2024",s:"done"}
+    ],
+    photos:[
+      {src:"photos/ampli-01-sous-couche.jpg",k:"Pendant",c:"Sous-couche blanche, chants protégés au ruban adhésif",tall:true},
+      {src:"photos/ampli-02-sechage.jpg",k:"Pendant",c:"Les amplificateurs en séchage après la sous-couche",tall:true},
+      {src:"photos/ampli-03-finitions.jpg",k:"Après",c:"Amplificateurs terminés : fente pour le téléphone et deux pavillons",tall:true}
+    ],
+    manque:[],
+    materiaux:["Panneaux de bois (couches collées)","Colle à bois, serre-joints","Scie, perceuse, papier abrasif","Ruban de masquage","Sous-couche, peinture en bombe, teinte"],
+    partenaires:[], documents:[{k:"Plan",v:"Plan de l'amplificateur et gabarit des couches"}],
+    paroles:"Aucun témoignage publié pour ce projet."
+  },
+  {
+    id:"exercice-mosaique",
+    titre:"Premiers pas en mosaïque",
+    accroche:"Un exercice court pour apprendre la mosaïque : tracer un motif géométrique, casser des carreaux en tesselles et les poser à la colle en suivant le dessin.",
+    classe:"SEGPA", annee:"2023-2024", statut:"Terminé", visuel:"attente",
+    couverture:"photos/mosa-02-diagonale.jpg", couvertureAlt:"Mosaïque d'élève en tesselles noires, blanches et turquoise posées en diagonale sur un panneau",
+    dimension:"Panneau individuel", duree:"Exercice court", cle:"4 motifs",
+    metiers:["Carreleur·se mosaïste"],
+    competences:["Lire un plan","Tracer et découper","Poser et assembler","Contrôler la qualité","Sécurité à l'atelier"],
+    presentation:["Chaque élève a tracé au crayon un motif géométrique sur son panneau : diagonales, chevrons, arcs de cercle. Il a ensuite cassé de vieux carreaux de faïence en tesselles et les a posées une à une à la colle, zone par zone, en respectant les couleurs du dessin.","Trois couleurs seulement (noir, blanc, turquoise), mais des choix très différents d'un élève à l'autre. Cet exercice pose les bases de la fresque du Phénix : lire un tracé, remplir une zone proprement, soigner les bords."],
+    etapes:[
+      {t:"Tracé du motif",d:"Dessin géométrique au crayon et à la règle sur le panneau",p:"2023-2024",s:"done"},
+      {t:"Préparation des tesselles",d:"Casse des carreaux et tri par couleur",p:"2023-2024",s:"done"},
+      {t:"Pose",d:"Collage des tesselles zone par zone, en suivant les contours",p:"2023-2024",s:"done"}
+    ],
+    photos:[
+      {src:"photos/mosa-02-diagonale.jpg",k:"Pendant",c:"Grande diagonale blanche entre deux zones noires",tall:true},
+      {src:"photos/mosa-03-chevrons.jpg",k:"Pendant",c:"Chevrons blancs et arc turquoise : la pose suit le tracé",tall:true},
+      {src:"photos/mosa-01-motif-bleu-blanc-noir.jpg",k:"Pendant",c:"Motif en bandes noires, blanches et turquoise",tall:true},
+      {src:"photos/mosa-04-noir-et-blanc.jpg",k:"Pendant",c:"Composition en noir et blanc, posée par le haut",tall:true}
+    ],
+    manque:["Après"],
+    materiaux:["Carreaux de faïence de récupération","Panneaux OSB et MDF","Colle à carrelage","Marteau, pince à carreaux","Lunettes et gants de protection"],
+    partenaires:[], documents:[],
+    paroles:"Aucun témoignage publié pour ce projet."
+  },
+  {
+    id:"peintre-batiment",
+    titre:"Rénover le couloir HAS : préparer et peindre les murs",
+    couverture:"photos/has-01-poncage-couloir.jpg", couvertureAlt:"Élèves en blouse bleue poncant les murs du couloir HAS",
+    accroche:"Pendant toute une année, les élèves ont remis en état les murs du couloir qui mène au restaurant pédagogique : rebouchage, enduit, ponçage, première couche.",
+    classe:"3e SEGPA", annee:"2025-2026", statut:"Terminé", visuel:"attente",
+    dimension:"Couloir HAS", duree:"Toute l'année", cle:"Murs rénovés",
+    metiers:["Peintre en bâtiment"],
+    competences:["Préparer un support","Appliquer une finition","Calculer des surfaces","Contrôler la qualité","Sécurité à l'atelier","Travailler en équipe"],
+    presentation:["Les élèves de 3e SEGPA ont travaillé sur un vrai chantier dans le collège : le couloir HAS, qui mène au restaurant pédagogique. Ils ont déposé les anciennes plinthes, repris les angles abîmés des portes, rebouché les trous, enduit, poncé, puis appliqué une première couche de peinture blanche.","C'est tout le travail de préparation du peintre, celui qu'on ne voit plus une fois le mur fini mais qui fait la qualité du résultat. La décoration du couloir est la suite du projet, en 2026-2027."],
+    etapes:[
+      {t:"Dépose et grattage",d:"Retrait des anciennes plinthes, grattage de la colle et des restes de peinture en pied de mur",p:"2025-2026",s:"done"},
+      {t:"Reprise des tableaux de porte",d:"Dégarnissage des angles abîmés, pose de panneaux neufs, reprise à l'enduit",p:"2025-2026",s:"done"},
+      {t:"Rebouchage et enduit",d:"Rebouchage des trous et des fissures, enduit sur toutes les zones reprises",p:"2025-2026",s:"done"},
+      {t:"Ponçage",d:"Ponçage à la cale, masque et lunettes, puis dépoussiérage",p:"2025-2026",s:"done"},
+      {t:"Première couche",d:"Peinture blanche sur l'ensemble du couloir",p:"2025-2026",s:"done"}
+    ],
+    photos:[
+      {src:"photos/has-01-poncage-couloir.jpg",k:"Pendant",c:"Ponçage des murs enduits, toute la classe au travail",tall:true},
+      {src:"photos/has-02-grattage-plinthes.jpg",k:"Pendant",c:"Grattage des pieds de mur après dépose des plinthes",tall:true},
+      {src:"photos/has-04-grattage-detail.jpg",k:"Pendant",c:"Détail : on gratte la colle des anciennes plinthes",tall:true},
+      {src:"photos/has-03-poncage-enduit.jpg",k:"Pendant",c:"Le mur rebouché et enduit, avant ponçage",tall:true},
+      {src:"photos/has-05-tableau-avant.jpg",k:"Avant",c:"Un tableau de porte abîmé en pied",tall:true},
+      {src:"photos/has-06-tableau-degarni.jpg",k:"Pendant",c:"L'angle dégarni avant reprise",tall:true},
+      {src:"photos/has-07-tableau-habillage.jpg",k:"Pendant",c:"Pose d'un panneau neuf pour reconstituer l'angle",tall:true},
+      {src:"photos/has-08-tableau-ragreage.jpg",k:"Pendant",c:"Autre tableau en cours de reprise",tall:true},
+      {src:"photos/has-09-porte-enduits.jpg",k:"Pendant",c:"Encadrement de porte repris à l'enduit, prêt à poncer"}
+    ],
+    manque:["Après"],
+    materiaux:["Enduit de rebouchage et de lissage","Panneaux pour la reprise des tableaux","Grattoirs, couteaux à enduire, cales à poncer","Peinture blanche, rouleaux, bacs","EPI : masques anti-poussière, gants, chaussures de sécurité"], partenaires:[], documents:[],
+    suite:"peinture-decoration"
+  },
+  {
+    id:"peinture-decoration",
+    titre:"Décorer le couloir HAS : couleurs et écritures",
+    accroche:"Suite du chantier : sur les murs remis en état l'an dernier, les élèves de 3e créent l'identité du couloir qui mène au restaurant pédagogique.",
+    classe:"3e SEGPA", annee:"2026-2027", statut:"Projet à valider", visuel:"attente",
+    couverture:"photos/deco-has-prototype.jpg", couvertureAlt:"Prototype du couloir décoré : soubassement gris foncé, tasseaux de bois, grands pictogrammes d'ustensiles de cuisine et titre Atelier HAS – Restaurant pédagogique", couvertureNote:"Prototype · image générée par IA · non validé par la direction",
+    dimension:"Couloir HAS", duree:"2026-2027", cle:"Mur décoré",
+    metiers:["Peintre en bâtiment","Menuisier·ère"],
+    competences:["Lire un plan","Mesurer et implanter","Tracer et découper","Poser et assembler","Appliquer une finition","Contrôler la qualité","Travailler en équipe","Présenter son travail"],
+    presentation:["Les murs du couloir HAS ont été remis en état par la promotion précédente. Cette année, les élèves de 3e SEGPA passent à la décoration du couloir qui mène au restaurant pédagogique.","Le prototype prévoit un soubassement peint en gris foncé, des tasseaux de bois verticaux, de grands pictogrammes d'ustensiles de cuisine (fouet, couteau, spatule) et des écritures : « Atelier HAS – Restaurant pédagogique », « Apprendre par le faire », « Rigueur – Hygiène – Savoir-faire ». Le projet doit encore être validé par la direction."],
+    alerte:"Projet en discussion : le visuel est un prototype, pas le résultat final.",
+    etapes:[
+      {t:"Murs préparés",d:"Rebouchage, enduit, ponçage et première couche par la promotion 2025-2026",p:"2025-2026",s:"done"},
+      {t:"Prototype",d:"Visuel d'intention : couleurs, pictogrammes, textes, tasseaux bois",p:"Sept. 2026",s:"done"},
+      {t:"Validation",d:"Présentation du projet à la direction",p:"À planifier",s:"wait"},
+      {t:"Traçage",d:"Report du soubassement, des pictogrammes et des lettres sur le mur",p:"2026-2027",s:""},
+      {t:"Mise en peinture",d:"Soubassement, pictogrammes, écritures, finitions",p:"2026-2027",s:""},
+      {t:"Pose des tasseaux",d:"Débit, finition et fixation des tasseaux de bois",p:"2026-2027",s:""}
+    ],
+    photos:[{src:"photos/deco-has-prototype.jpg",k:"Conception",c:"Prototype du couloir décoré (image générée par IA, non validée)",tall:true}],
+    manque:["Avant","Pendant","Après"],
+    materiaux:["Peinture de soubassement gris foncé","Peintures pour pictogrammes et lettrage","Pochoirs ou gabarits de traçage","Tasseaux de bois","Rouleaux, pinceaux, ruban de masquage"],
+    partenaires:[], documents:[{k:"Maquette",v:"Prototype du couloir décoré"}]
+  },
+  {
+    id:"luthier-conservatoire",
+    titre:"Découvrir la lutherie avec le conservatoire de Grigny",
+    accroche:"Avec le conservatoire de Grigny, les élèves découvrent le métier de luthier : cintrer le bois, monter la caisse d'un instrument, coller la table.",
+    classe:"3e SEGPA", annee:"2024-2025", statut:"Terminé", visuel:"attente",
+    couverture:"photos/luth-01-pose-eclisse.jpg", couvertureAlt:"Mains d'un élève posant une éclisse de bois cintrée autour du moule de l'instrument",
+    dimension:"Instrument à cordes", duree:"Toute l'année", cle:"Caisse d'instrument",
+    metiers:["Luthier·ère"],
+    competences:["Lire un plan","Tracer et découper","Poser et assembler","Appliquer une finition","Contrôler la qualité","Sécurité à l'atelier","Travailler en équipe"],
+    presentation:["Pendant toute l'année, les élèves de 3e SEGPA ont découvert la lutherie avec le conservatoire de Grigny. Ils ont travaillé sur la caisse d'un instrument à cordes frottées, joué avec un archet.","Ils ont réalisé les gestes du luthier : préparer le moule et ses tasseaux, cintrer les éclisses au fer chaud, les poser autour du moule, puis assembler et coller les deux moitiés de la table. Un métier où chaque dixième de millimètre compte."],
+    etapes:[
+      {t:"Le moule",d:"Découpe du moule en contreplaqué et mise en place des tasseaux",p:"2024-2025",s:"done"},
+      {t:"Cintrage des éclisses",d:"Les fines lames de bois sont humidifiées puis courbées sur un fer chaud",p:"2024-2025",s:"done"},
+      {t:"Montage des éclisses",d:"Les éclisses sont posées et collées autour du moule, contre les tasseaux",p:"2024-2025",s:"done"},
+      {t:"La table",d:"Les deux moitiés de la table sont jointes et collées sous serre-joints",p:"2024-2025",s:"done"}
+    ],
+    photos:[
+      {src:"photos/luth-01-pose-eclisse.jpg",k:"Pendant",c:"Pose d'une éclisse cintrée autour du moule"},
+      {src:"photos/luth-03-cintrage-fer.jpg",k:"Pendant",c:"Cintrage d'une éclisse sur le fer chaud",tall:true},
+      {src:"photos/luth-05-detail-tasseau.jpg",k:"Pendant",c:"Détail : l'éclisse vient s'appuyer contre le tasseau",tall:true},
+      {src:"photos/luth-02-moules-et-outils.jpg",k:"Pendant",c:"Moules des élèves, compas et fiche outils",tall:true},
+      {src:"photos/luth-06-collage-table.jpg",k:"Pendant",c:"Collage des deux moitiés de la table sous serre-joints"},
+      {src:"photos/luth-04-instrument-termine.jpg",k:"Après",c:"L'instrument terminé, avec son archet et les outils du luthier",tall:true}
+    ],
+    manque:[],
+    materiaux:["Contreplaqué (moules)","Éclisses en bois fin","Épicéa (table)","Colle à bois","Fer à cintrer, compas, serre-joints, ciseaux à bois"],
+    partenaires:["Conservatoire de Grigny"], documents:[{k:"Fiche",v:"Fiche outils : tracer, scier, mesurer"}],
+    paroles:"Aucun témoignage publié pour ce projet."
+  }
+];
+const METIERS = {
+  "Maçon·ne":{d:"Construit les murs, les fondations et les ouvrages en blocs, en briques ou en béton. C'est le premier corps de métier sur un chantier de gros œuvre.",
+    c:["Implanter un ouvrage (cordeau, repères, niveau)","Préparer un mortier ou un béton","Monter des blocs à joints croisés","Contrôler niveau, aplomb et alignement","Poser un linteau au-dessus d'une ouverture","Manutentionner des charges en sécurité"]},
+  "Peintre en bâtiment":{d:"Prépare et embellit les murs, les plafonds et les boiseries, à l'intérieur comme en façade. Il intervient en fin de chantier, là où tout se voit.",
+    c:["Protéger les sols et les ouvrages","Préparer un support (reboucher, poncer, dépoussiérer)","Calculer une surface et une quantité de peinture","Appliquer au rouleau et au pinceau","Réaliser des finitions nettes (rechampis)","Nettoyer et entretenir son matériel"]},
+  "Menuisier·ère":{d:"Fabrique et pose des ouvrages en bois : portes, fenêtres, escaliers, meubles et agencements, à l'atelier puis sur le chantier.",
+    c:["Lire un plan et une fiche de débit","Tracer et mesurer au millimètre","Découper et usiner le bois","Assembler, coller, visser","Poncer et appliquer une finition","Utiliser les machines en sécurité"]},
+  "Luthier·ère":{d:"Fabrique, entretient et répare des instruments de musique à cordes. Un métier d'artisan où la précision du geste s'entend dans le son.",
+    c:["Choisir et préparer les bois","Tracer et découper des pièces fines","Assembler et coller avec précision","Poncer et vernir","Régler l'instrument","Écouter et ajuster le son"]},
+  "Carreleur·se mosaïste":{d:"Découpe et pose des carreaux, des pierres ou des tesselles pour créer des revêtements et des décors.",
+    c:["Lire un plan de calepinage","Préparer le support","Découper les carreaux et tesselles","Poser à la colle en respectant l'alignement","Réaliser les joints","Contrôler la planéité"]},
+  "Couvreur·se ardoisier·ère":{d:"Pose et répare les couvertures et les façades en ardoise, en tuile ou en métal.",
+    c:["Lire un plan de toiture","Tailler et percer les ardoises","Poser en respectant le recouvrement","Assurer l'étanchéité","Travailler en hauteur en sécurité"]},
+  "Monteur·se en structures aéronautiques":{d:"Assemble les pièces du fuselage et des ailes par rivetage, boulonnage et collage.",
+    c:["Lire un plan d'assemblage","Percer et riveter","Ajuster les pièces","Contrôler les cotes","Respecter les procédures qualité"]},
+  "Mécanicien·ne aéronautique":{d:"Entretient et répare les moteurs, les commandes et les structures des avions.",
+    c:["Suivre une documentation technique","Démonter et remonter un ensemble","Régler les commandes de vol","Diagnostiquer une panne","Tracer chaque intervention"]},
+  "Technicien·ne avionique":{d:"Installe et contrôle l'électronique de bord : instruments, radio, navigation.",
+    c:["Lire un schéma électrique","Câbler et raccorder","Tester un circuit","Installer des instruments de bord"]}
+};
+
+/* ---------- Visuels provisoires ---------- */
+function drawMosaic(cv){
+  const r=cv.getBoundingClientRect(),dpr=devicePixelRatio||1;if(!r.width)return;cv.width=r.width*dpr;cv.height=r.height*dpr;
+  const c=cv.getContext("2d");c.scale(dpr,dpr);let s=11;const rnd=()=>(s=(s*9301+49297)%233280)/233280;
+  c.fillStyle="#9AA1A6";c.fillRect(0,0,r.width,r.height);const size=Math.max(14,r.width/34);
+  for(let y=0;y<r.height+size;y+=size){for(let x=0;x<r.width+size;x+=size){
+    const dist=Math.hypot(x-r.width*.55,y-r.height*.5)/r.width,ring=Math.sin(dist*26)>0.55,g=ring?64+rnd()*40:28+rnd()*26;
+    c.fillStyle=`rgb(${g},${g+5},${g+10})`;c.save();c.translate(x+rnd()*3,y+rnd()*3);c.rotate((rnd()-.5)*.12);
+    c.fillRect(1.5,1.5,size-3-rnd()*3,size-3-rnd()*3);c.restore();}}
+  c.strokeStyle="rgba(255,201,40,.9)";c.lineWidth=3;c.setLineDash([10,6]);c.beginPath();c.moveTo(r.width*.72,0);c.lineTo(r.width*.72,r.height);c.stroke();
+  c.setLineDash([]);c.fillStyle="rgba(255,255,255,.92)";c.font=`500 ${Math.max(10,r.width/70)}px "IBM Plex Mono",monospace`;c.fillText("MÉRIDIEN",r.width*.72+8,22);
+}
+function drawPlan(cv){
+  const r=cv.getBoundingClientRect(),dpr=devicePixelRatio||1;if(!r.width)return;cv.width=r.width*dpr;cv.height=r.height*dpr;
+  const c=cv.getContext("2d");c.scale(dpr,dpr);const W=r.width,H=r.height;c.fillStyle="#1D3F86";c.fillRect(0,0,W,H);
+  c.strokeStyle="rgba(255,255,255,.08)";const g=Math.max(12,W/40);
+  for(let x=0;x<W;x+=g){c.beginPath();c.moveTo(x,0);c.lineTo(x,H);c.stroke()}for(let y=0;y<H;y+=g){c.beginPath();c.moveTo(0,y);c.lineTo(W,y);c.stroke()}
+  const cx=W*.5,cy=H*.5,s=Math.min(W/2.3,H/1.25);c.strokeStyle="rgba(255,255,255,.9)";c.lineWidth=1.6;
+  c.strokeRect(cx-s*.5,cy-s*.23,s,s*.13);c.beginPath();c.moveTo(cx-s*.04,cy-s*.42);c.lineTo(cx+s*.04,cy-s*.42);c.lineTo(cx+s*.03,cy+s*.42);c.lineTo(cx-s*.03,cy+s*.42);c.closePath();c.stroke();
+  c.strokeRect(cx-s*.17,cy+s*.3,s*.34,s*.08);
+}
+function paint(){document.querySelectorAll("canvas[data-v]").forEach(cv=>cv.dataset.v==="mosaique"?drawMosaic(cv):drawPlan(cv))}
+
+/* ---------- Rendu ---------- */
+const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const uniq=a=>[...new Set(a)].sort((x,y)=>x.localeCompare(y,"fr"));
+let F={metier:"",annee:"",classe:"",comp:""};
+const media=(p,cls)=>p.couverture?`<img src="${p.couverture}" alt="${esc(p.couvertureAlt)}" loading="lazy">`:p.visuel==="attente"?`<div class="wait-ph">Photos à venir</div>`:`<canvas data-v="${p.visuel}" aria-hidden="true"></canvas>`;
+
+function card(p){
+  return `<a class="card" href="#habitat-${p.id}">
+    <div class="card-media">${media(p)}<span class="status"><i></i>${esc(p.statut)}</span></div>
+    <div class="card-body"><span class="label">${esc(p.classe)} · ${esc(p.annee)}</span><h2>${esc(p.titre)}</h2><p>${esc(p.accroche)}</p>
+      <div class="tags">${p.metiers.map(m=>`<span class="tag m">${esc(m)}</span>`).join("")}</div></div>
+    <div class="cartouche"><div><span>Classe</span><b>${esc(p.classe)}</b></div><div><span>Durée</span><b>${esc(p.duree)}</b></div><div><span>Cote</span><b>${esc(p.dimension)}</b></div><div><span>Ouvrage</span><b>${esc(p.cle)}</b></div></div>
+  </a>`;
+}
+const opt=(list,val,all)=>`<option value="">${all}</option>`+list.map(v=>`<option ${v===val?"selected":""}>${esc(v)}</option>`).join("");
+
+function viewHome(){
+  const list=PROJETS.filter(p=>(!F.metier||p.metiers.includes(F.metier))&&(!F.annee||p.annee===F.annee)&&(!F.classe||p.classe===F.classe)&&(!F.comp||p.competences.includes(F.comp)));
+  return subnav("habitat")+`<section class="hero">
+      <div><span class="label">Réalisations des élèves de 4e et 3e SEGPA</span>
+      <h1>Des élèves qui <em>construisent</em>, de leurs mains, pour de vrai.</h1>
+      <p>À l'atelier Habitat, chaque projet est un vrai chantier : un plan, des matériaux, des délais, des partenaires. Les élèves y découvrent les métiers du bâtiment, et bien au-delà.</p>
+      <div class="stats"><div><b>${PROJETS.length}</b><span>réalisations</span></div><div><b>${uniq(PROJETS.flatMap(p=>p.metiers)).length}</b><span>métiers découverts</span></div><div><b>24,75</b><span>m² de mosaïque</span></div></div></div>
+      <figure class="hero-photo"><img src="photos/ulm-coque-3.jpg" alt="Élève poncant la coque rouge d'un fuselage d'ULM"><span class="sticker">En chantier !</span><figcaption>3e SEGPA · préparation de la coque de l'ULM</figcaption></figure>
+    </section>
+    <form class="filters" id="filters" aria-label="Filtrer les réalisations">
+      <label><span class="label">Métier</span><select id="f-metier" name="metier">${opt(uniq(PROJETS.flatMap(p=>p.metiers)),F.metier,"Tous les métiers")}</select></label>
+      <label><span class="label">Classe</span><select id="f-classe" name="classe">${opt(uniq(PROJETS.map(p=>p.classe)),F.classe,"Toutes")}</select></label>
+      <label><span class="label">Année</span><select id="f-annee" name="annee">${opt(uniq(PROJETS.map(p=>p.annee)),F.annee,"Toutes")}</select></label>
+      <label><span class="label">Compétence</span><select id="f-comp" name="comp">${opt(uniq(PROJETS.flatMap(p=>p.competences)),F.comp,"Toutes")}</select></label>
+      ${Object.values(F).some(Boolean)?`<button type="button" class="reset" id="reset">Effacer les filtres</button>`:""}
+      <span class="count mono">${list.length} projet${list.length>1?"s":""}</span>
+    </form>
+    <div class="grid">${list.length?list.map(card).join(""):`<div class="empty">Aucun projet ne correspond à ces filtres.</div>`}</div>`;
+}
+
+function viewProjet(p){
+  const photos=p.photos.map((f,i)=>`<figure class="${f.tall?"tall":""}"><button type="button" class="ph-btn" data-i="${i}" aria-label="Agrandir : ${esc(f.c)}"><img src="${f.src}" alt="${esc(f.c)}" loading="lazy"></button><figcaption><span class="k">${esc(f.k)}</span>${esc(f.c)}</figcaption></figure>`).join("")
+    + p.manque.map(k=>`<figure><div class="ph mono">Photo « ${k.toLowerCase()} » à venir</div><figcaption><span class="k">${k}</span>Sans visage, prénoms seuls</figcaption></figure>`).join("");
+  return subnav("habitat")+`<div class="crumb"><a href="#habitat">← Toutes les réalisations</a></div>
+    <div class="p-head"><span class="label">${esc(p.classe)} · ${esc(p.annee)}</span><h1>${esc(p.titre)}</h1><p class="sub">${esc(p.accroche)}</p></div>
+    <div class="p-hero">${p.couverture?`<img src="${p.couverture}" alt="${esc(p.couvertureAlt)}">${p.couvertureNote?`<span class="ph-note mono">${esc(p.couvertureNote)}</span>`:""}`:(p.visuel==="attente"?`<div class="wait-ph">Photos à venir</div>`:`<canvas data-v="${p.visuel}" aria-hidden="true"></canvas><span class="ph-note mono">Visuel provisoire · photo à venir</span>`)}</div>
+    <div class="cartouche p-cart"><div><span>Classe</span><b>${esc(p.classe)}</b></div><div><span>Année</span><b>${esc(p.annee)}</b></div><div><span>Durée</span><b>${esc(p.duree)}</b></div><div><span>Cote</span><b>${esc(p.dimension)}</b></div><div><span>Ouvrage</span><b>${esc(p.cle)}</b></div><div><span>Étape</span><b>${esc(p.statut)}</b></div></div>
+    <div class="p-layout">
+      <div class="p-main">
+        <section><h2>Le projet</h2>${p.alerte?`<p class="alert">${esc(p.alerte)}</p>`:""}${p.presentation.map(t=>`<p>${esc(t)}</p>`).join("")}</section>
+        <section><h2>Avant · pendant · après <span class="mono">${p.photos.length} photo${p.photos.length>1?"s":""}</span></h2><div class="gallery">${photos}</div></section>
+        ${p.etapes.length?`<section><h2>Étapes <span class="mono">${p.etapes.length} phases</span></h2>
+          <ol class="steps">${p.etapes.map(e=>`<li class="${e.s}"><b>${esc(e.t)}${e.s==="now"?'<span class="pill now">en cours</span>':e.s==="wait"?'<span class="pill wait">en attente</span>':""}</b><span class="mono">${esc(e.p)}</span><div>${esc(e.d)}</div></li>`).join("")}</ol></section>`:""}
+        ${p.documents.length?`<section><h2>Plans, carnets et vidéos</h2><div class="docs">${p.documents.map(d=>`<div class="doc"><span class="label">${esc(d.k)}</span>${esc(d.v)}</div>`).join("")}</div></section>`:""}
+        <section><h2>Paroles d'élèves</h2><div class="quote-empty">${esc(p.paroles||"Les témoignages seront recueillis auprès des élèves pendant le projet et publiés avec leur prénom seul.")}</div></section>
+        <section><h2>Compétences travaillées</h2><div class="comp">${p.competences.map(c=>`<div>${esc(c)}</div>`).join("")}</div></section>
+      </div>
+      <aside class="p-side">
+        <div><h3 class="label">Métiers découverts</h3><ul>${p.metiers.map(m=>`<li>${esc(m)}</li>`).join("")}</ul></div>
+        <div><h3 class="label">Matériaux et outils</h3><ul>${p.materiaux.map(m=>`<li>${esc(m)}</li>`).join("")}</ul></div>
+        ${p.partenaires.length?`<div><h3 class="label">Partenaires</h3><ul>${p.partenaires.map(m=>`<li>${esc(m)}</li>`).join("")}</ul></div>`:""}
+      </aside>
+    </div>`;
+}
+function viewMetiers(){
+  return subnav("habitat-metiers")+`<h1 class="page-h">Métiers découverts</h1><p class="lead">Chaque projet fait rencontrer aux élèves des métiers concrets. Choisis un métier pour voir les réalisations qui le font découvrir.</p>
+  <div class="m-list">${Object.entries(METIERS).map(([m,d])=>{const n=PROJETS.filter(p=>p.metiers.includes(m)).length;
+    return `<div class="m-item"><h3>${esc(m)}</h3><p>${esc(d.d)}</p><span class="label">Compétences du métier</span><ul class="m-comp">${d.c.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><a href="#habitat" data-metier="${esc(m)}">${n} projet${n>1?"s":""} →</a></div>`}).join("")}</div>`;
+}
+
+
+/* ---------- Pages SEGPA (textes génériques : les encadrés « À compléter » signalent ce qu'il faut remplacer) ---------- */
+const todo=t=>`<p class="alert"><b>À compléter :</b> ${t}</p>`;
+const EQUIPE=[
+  ["Sandrine Espinasse","Directrice de la SEGPA"],
+  ["Julien Lemaire-Hue","Professeur des écoles"],
+  ["Cécile Mazzoni","Professeure des écoles"],
+  ["Marion Biotteau","Professeure des écoles"],
+  ["David Dos Santos","Professeur de l'atelier Habitat"],
+  ["Elisabeth Ponitzsch","Professeure de l'atelier HAS, arrivée cette année"]
+];
+/* Orientations après la 3e : renseigner les nombres (null = pas encore renseigné). Chiffres globaux uniquement, sans noms. */
+const ORIENTATIONS=[
+  {annee:"2026",cap:null,bacpro:null,autre:null},
+  {annee:"2025",cap:11,bacpro:5,autre:null,details:"Parmi les CAP : des départs en alternance (CFA) et 2 en EREA."}
+];
+function orientBlock(){
+  const ok=o=>o.cap!==null&&o.bacpro!==null;
+  const cards=ORIENTATIONS.map(o=>{
+    if(!ok(o))return `<div class="doc"><span class="label">Sortie de 3e en ${esc(o.annee)}</span><p>CAP : <b>à renseigner</b></p><p>Bac pro : <b>à renseigner</b></p></div>`;
+    const tot=o.cap+o.bacpro+(o.autre||0);
+    const pc=n=>Math.round(100*n/tot);
+    return `<div class="doc"><span class="label">Sortie de 3e en ${esc(o.annee)}</span>
+      <p>CAP : <b>${o.cap} élève${o.cap>1?"s":""}</b></p><p>Bac pro : <b>${o.bacpro} élève${o.bacpro>1?"s":""}</b></p>${o.autre?`<p>Autre : <b>${o.autre}</b></p>`:""}${o.details?`<p style="font-size:.88rem;color:var(--ink-2)">${esc(o.details)}</p>`:""}
+      <div class="bar" aria-hidden="true"><i style="width:${pc(o.cap)}%"></i><i class="b" style="width:${pc(o.bacpro)}%"></i></div></div>`}).join("");
+  const missing=ORIENTATIONS.some(o=>!ok(o));
+  return `<h3 style="margin:24px 0 12px;font-family:var(--display)">Où vont nos élèves ?</h3><div class="docs">${cards}</div>${missing?"<div style=\"height:12px\"></div>"+todo("les nombres d'élèves orientés en CAP et en bac pro pour chaque année (chiffres globaux, sans noms)."):""}`;
+}
+function subnav(a){
+  if(a==="has")return `<div class="subnav"><span class="label">Atelier HAS</span><a href="#has" aria-current="page">Réalisations</a><a href="#has-metiers">Métiers</a></div>`;
+  if(a==="has-metiers")return `<div class="subnav"><span class="label">Atelier HAS</span><a href="#has">Réalisations</a><a href="#has-metiers" aria-current="page">Métiers</a></div>`;
+  return `<div class="subnav"><span class="label">Atelier Habitat</span><a href="#habitat"${a==="habitat"?' aria-current="page"':""}>Réalisations</a><a href="#habitat-metiers"${a==="habitat-metiers"?' aria-current="page"':""}>Métiers</a></div>`}
+const HAS_METIERS=[
+  {m:"Cuisinier·ère",d:"Prépare les repas : éplucher, découper, cuire, dresser, en respectant les règles d'hygiène.",c:["Lire une fiche technique","Peser et mesurer","Préparer et cuire","Dresser une assiette","Respecter les règles d'hygiène (HACCP)","Nettoyer son poste"]},
+  {m:"Employé·e polyvalent·e de restauration",d:"Accueille les clients, dresse les tables, sert et débarrasse, tient la salle et le self.",c:["Dresser une table","Accueillir et servir","Débarrasser","Entretenir la salle","Travailler en équipe"]},
+  {m:"Agent·e d'hygiène et de propreté",d:"Entretient les locaux et le matériel selon des protocoles précis.",c:["Choisir le bon produit","Respecter les dosages et la sécurité","Nettoyer et désinfecter","Organiser son chariot"]}
+];
+function viewHas(){
+  return subnav("has")+`<section class="hero">
+    <div><span class="label">Hygiène · Alimentation · Services</span>
+      <h1>Apprendre <em>par le faire</em>, au restaurant pédagogique.</h1>
+      <p>À l'atelier HAS, les élèves découvrent les métiers de la cuisine, du service et de l'entretien : rigueur, hygiène, savoir-faire.</p>
+      <p class="alert"><b>À compléter :</b> présentation de l'atelier HAS (horaires, effectifs, équipements). Ce nom est déduit du site Habitat : à confirmer.</p></div>
+    <div class="facts" aria-label="L'atelier HAS en bref">
+      <div><span>Réalisations</span><b>à venir</b></div><div><span>Métiers découverts</span><b>${HAS_METIERS.length}</b></div>
+      <div><span>Lieu</span><b>Restaurant pédagogique</b></div><div><span>Devise</span><b>Apprendre par le faire</b></div></div>
+  </section>
+  <section class="sec"><h2>Réalisations</h2>
+    <div class="empty">Les premiers projets de l'atelier HAS arrivent au fil de l'année : ils seront présentés ici comme ceux de l'atelier Habitat, avec la classe, l'année, les étapes et les photos.</div></section>`;
+}
+function viewHasMetiers(){
+  return subnav("has-metiers")+`<h1 class="page-h">Métiers découverts</h1><p class="lead">Les métiers que les élèves rencontrent à l'atelier HAS.</p>
+  <p class="alert"><b>À compléter :</b> vérifier cette liste de métiers avec l'enseignante de l'atelier HAS.</p>
+  <div class="m-list">${HAS_METIERS.map(x=>`<div class="m-item"><h3>${esc(x.m)}</h3><p>${esc(x.d)}</p><span class="label">Compétences du métier</span><ul class="m-comp">${x.c.map(k=>`<li>${esc(k)}</li>`).join("")}</ul></div>`).join("")}</div>`;
+}
+function viewAccueil(){
+  const nb=PROJETS.length;
+  return `<section class="hero">
+    <div><span class="label">Collège Jean Vilar · Grigny (91) · Académie de Versailles</span>
+      <h1>La SEGPA, où l'on <em>apprend</em> en faisant.</h1>
+      <p>Des classes à petit effectif, des enseignants spécialisés et, dès la 4e, des ateliers professionnels où les élèves réalisent de vrais projets.</p>
+      <div class="btns"><a class="btn pri" href="#habitat">Voir l'atelier Habitat</a><a class="btn pri" href="#has">Voir l'atelier HAS</a><a class="btn" href="#segpa">Qu'est-ce que la SEGPA ?</a></div></div>
+    <div class="facts" aria-label="La SEGPA en bref">
+      <div><span>Classes</span><b>6e à 3e</b></div><div><span>Ateliers professionnels</span><b>dès la 4e</b></div>
+      <div><span>Ateliers</span><b>Habitat · HAS</b></div><div><span>Diplômes</span><b>CFG · DNB</b></div></div>
+  </section>
+  <section class="sec"><h2>Sur ce site</h2>
+    <div class="m-list">
+      <a class="m-item lnk" href="#segpa"><span class="label">Comprendre</span><h3>La SEGPA</h3><p>Pour qui, comment on y entre, ce que les élèves y apprennent.</p></a>
+      <a class="m-item lnk" href="#equipe"><span class="label">Rencontrer</span><h3>L'équipe</h3><p>Les adultes qui accompagnent les élèves au quotidien.</p></a>
+      <a class="m-item lnk" href="#ateliers"><span class="label">Découvrir</span><h3>Les ateliers</h3><p>Les champs professionnels travaillés en 4e (6 h par semaine) et en 3e (11 h par semaine).</p></a>
+      <a class="m-item lnk" href="#habitat"><span class="label">Voir</span><h3>Atelier Habitat</h3><p>Les réalisations des élèves : projets en cours et terminés, photos, étapes. Atelier : 6 h par semaine en 4e, 11 h en 3e.</p></a>
+      <a class="m-item lnk" href="#projets"><span class="label">Partager</span><h3>Projets</h3><p>Les projets des élèves, de la 6e à la 3e.</p></a>
+    </div></section>`;
+}
+function viewProjets(){
+  return `<h1 class="page-h">Projets</h1>
+  <p class="lead">Les projets menés par les élèves, classe par classe.</p>
+  ${["6e","5e","4e","3e"].map(c=>`<section class="sec"><h2>Projets des ${c}</h2><p class="alert"><b>À compléter :</b> aucun projet renseigné pour l'instant.</p></section>`).join("")}`;
+}
+function viewSegpa(){
+  return `<h1 class="page-h">Qu'est-ce que la SEGPA ?</h1>
+  <p class="lead">SEGPA signifie Section d'Enseignement Général et Professionnel Adapté. Elle fait partie du collège : les élèves partagent la cour, la cantine, la vie scolaire et certains projets avec les autres classes.</p>
+  <section class="sec"><h2>Pour quels élèves ?</h2>
+    <p>La SEGPA accueille des élèves qui ont des difficultés scolaires importantes et durables. L'enseignement suit les programmes du collège, avec des méthodes adaptées, plus de temps et un suivi individuel.</p>
+    <p>L'orientation se décide en fin de CM2 ou en cours de 6e, après étude du dossier par une commission départementale et avec l'accord de la famille.</p></section>
+  <section class="sec"><h2>Le parcours, de la 6e à la 3e</h2>
+    <div class="cartouche parcours">
+      <div><b>6e</b><span class="label">Adaptation</span><p>Consolider les bases en français et en mathématiques, prendre ses repères.</p></div>
+      <div><b>5e</b><span class="label">Découverte</span><p>Approfondir, découvrir les métiers et les champs professionnels.</p></div>
+      <div><b>4e</b><span class="label">Ateliers</span><p>Entrée dans les ateliers professionnels et premier stage.</p></div>
+      <div><b>3e</b><span class="label">Orientation</span><p>Stages, CFG et DNB, projet de poursuite vers un CAP.</p></div>
+    </div></section>
+  <section class="sec"><h2>Et après la 3e ?</h2>
+    <p>La plupart des élèves de SEGPA poursuivent vers un CAP, en lycée professionnel ou en apprentissage. Le travail en atelier et les stages servent à choisir un métier en connaissance de cause.</p>
+    <p>Les meilleurs élèves ont aussi la possibilité de demander un bac pro. Cette demande passe par un dossier, étudié par une commission qui valide ou non la demande. Le dossier ne garantit pas l'affectation : certains élèves l'obtiennent, d'autres non.</p>
+    <p><b>Pour découvrir les CAP en Essonne</b>, les élèves utilisent le site Orientation 91.</p>
+    ${orientBlock()}
+    <p style="margin-top:24px"><a class="btn pri" href="https://orientation91.fr" target="_blank" rel="noopener">Découvrir les CAP en Essonne →</a></p>
+  </section>`;
+}
+function viewEquipe(){
+  return `<h1 class="page-h">L'équipe de la SEGPA</h1>
+  <p class="lead">Les adultes qui accompagnent les élèves de la SEGPA au quotidien.</p>
+  <div class="team">${EQUIPE.map(([r,d])=>`<div class="doc"><h3>${esc(r)}</h3><p>${esc(d)}</p></div>`).join("")}</div>`;
+}
+function viewAteliers(){
+  return `<h1 class="page-h">Les ateliers professionnels</h1>
+  <p class="lead">À partir de la 4e, les élèves travaillent en atelier : <strong>6 heures par semaine en 4e</strong> et <strong>11 heures par semaine en 3e</strong>. Ils y apprennent des gestes de métier, la sécurité et le travail en équipe, sur des projets concrets.</p>
+  <div class="m-list">
+    <a class="m-item lnk" href="#habitat"><span class="label">Champ professionnel</span><h3>Habitat</h3><p>Maçonnerie, menuiserie, peinture, mosaïque, lutherie, aéronautique. ${PROJETS.length} réalisations à découvrir.</p><span class="btn pri">Voir l'atelier Habitat →</span></a>
+    <a class="m-item lnk" href="#has"><span class="label">Champ professionnel</span><h3>HAS (hygiène, alimentation, services)</h3><p>Cuisine, service et entretien, au restaurant pédagogique du collège.</p><span class="btn pri">Voir l'atelier HAS →</span></a>
+  </div>`;
+}
+
+/* ---------- Routage ---------- */
+function render(){
+  let h=(location.hash||"#accueil").slice(1);
+  if(h==="metiers")h="habitat-metiers";
+  if(h==="has")h="has";
+  if(PROJETS.some(x=>x.id===h))h="habitat-"+h;
+  const v=document.getElementById("view");
+  const pid=h.startsWith("habitat-")&&h!=="habitat-metiers"?h.slice(8):null;
+  const p=pid&&PROJETS.find(x=>x.id===pid);
+  let html;
+  if(p)html=viewProjet(p);
+  else if(h==="habitat-metiers")html=viewMetiers();
+  else if(h==="has")html=viewHas();
+  else if(h==="has-metiers")html=viewHasMetiers();
+  else if(h==="habitat")html=viewHome();
+  else if(h==="segpa")html=viewSegpa();
+  else if(h==="equipe")html=viewEquipe();
+  else if(h==="ateliers")html=viewAteliers();
+  else if(h==="projets")html=viewProjets();
+  else{h="accueil";html=viewAccueil()}
+  v.innerHTML=html;
+  const key=h.startsWith("habitat")?"habitat":h.startsWith("has")?"has":h;
+  document.querySelectorAll("nav.main a").forEach(a=>{if(a.dataset.nav===key)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+  requestAnimationFrame(paint);
+  const f=document.getElementById("filters");
+  if(f){f.addEventListener("change",e=>{F[e.target.name]=e.target.value;render()});const r=document.getElementById("reset");if(r)r.onclick=()=>{F={metier:"",annee:"",classe:"",comp:""};render()};}
+  document.querySelectorAll("[data-metier]").forEach(a=>a.addEventListener("click",()=>{F={metier:a.dataset.metier,annee:"",classe:"",comp:""}}));
+  if(p)document.querySelectorAll(".ph-btn").forEach(b=>b.onclick=()=>{const ph=p.photos[+b.dataset.i],d=document.getElementById("lb");
+    document.getElementById("lb-img").src=ph.src;document.getElementById("lb-img").alt=ph.c;document.getElementById("lb-cap").textContent=ph.c;try{d.showModal()}catch(e){d.setAttribute("open","")}});
+}
+document.getElementById("lb-close").onclick=()=>document.getElementById("lb").close();
+document.getElementById("lb").addEventListener("click",e=>{if(e.target.id==="lb")e.target.close()});
+
+/* Photo absente du dossier photos/ : on affiche un repère au lieu d'une image cassée */
+const PH_SVG="data:image/svg+xml;utf8,"+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" fill="#E8EEFF"/><path d="M0 0L400 250M400 0L0 250" stroke="#C9D6FF" stroke-width="2"/><text x="200" y="130" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="700" fill="#1F4FD1">Photo à ajouter</text></svg>');
+document.addEventListener("error",e=>{const t=e.target;if(t&&t.tagName==="IMG"&&!t.classList.contains("missing")){t.classList.add("missing");t.src=PH_SVG}},true);
+
+document.body.classList.add("s-b");
+addEventListener("hashchange",()=>{render();scrollTo(0,0)});
+addEventListener("resize",()=>{clearTimeout(window._t);window._t=setTimeout(paint,150)});
+render();
+
+</script>
+</body>
+</html>
